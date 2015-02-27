@@ -32,6 +32,7 @@ This will be a set of user stories that have driven the requirements for CIAO.
 Explain the concept of a CIP. Define the key architectural principles CIPs implement and explain why. These will include:
 * Interface Contracts – standard public interface definitions.
 * Dependency Injection – just through configuration e.g. say a CIP needs to persist data to a message queue; then the location and name of that message queue would be a configuration item that is loaded at run time.
+* Configuration Management - managing the configuration for CIPs
 * Monitoring and management – being able to see what the CIP is doing (has done) and provide some external control over at least its lifecycle, but possibly its internal behaviour. Done through interface contracts.
 * Diagnostics – essentially being able to ask a CIP to self-test itself. Done through interface contracts.
 
