@@ -22,7 +22,7 @@ All configuration in etcd is in the form of key-value pairs, and is created in
 a simple hierarchical directory structure. The convention used in CIAO is as
 follows:
 
-/ciao/<cipname>/
+`/ciao/<cipname>/`
 
 Within this directory, all CIPs will have a key called "version", which stores
 the version of the CIP that is running.
@@ -39,7 +39,7 @@ If you are unable to use etcd for some reason (or choose not to), CIPs will
 fall-back on local configuration files. These will by default be saved in the
 user's home directory in the path:
 
-~/.ciao/cipname.properties
+`~/.ciao/cipname.properties`
 
 Obviously, this will mean that configuration will need to be managed individually
 on all running instances - there is no mechanism for keeping these configuration
@@ -62,7 +62,7 @@ compile a 32bit version from source, but this is not trivial.
 
 The first time a CIP is run, it will attempt to connect to the etcd URL provided.
 If it is able to connect, it will check whether configuration already exists for
-this CIP. It will do this by looking for the /ciao/<cipname>/version key. If
+this CIP. It will do this by looking for the `/ciao/<cipname>/version` key. If
 config already exists, it will be used immediately. If no config exists, a
 default set of configuration values will be added to the etcd repository.
 If the CIP is unable to connect to the provided URL, an error will be returned.
