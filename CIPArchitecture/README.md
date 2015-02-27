@@ -14,7 +14,7 @@ also provides replication to allow each CIP to have it's configuration kept
 in-sync as new instances are created.
 
 etcd has been produced as part of the CoreOS project, and more details can be
-found on their (github page)[https://github.com/coreos/etcd].
+found on their [github page](https://github.com/coreos/etcd).
 
 ## CIAO Configuration Naming Conventions
 
@@ -52,7 +52,7 @@ docker container, alongside the CIPs on that machine (see deployment section).
 
 If the CIP will be run in a different environment (e.g. within an OSGi container
 or natively), then etcd can be installed manually - see the
-(etcd github page)[https://github.com/coreos/etcd]
+[etcd github page](https://github.com/coreos/etcd)
 for details on how to do this.
 
 NOTE - etcd is currently only supported on 64bit machines. It may be possible to
@@ -76,5 +76,5 @@ configuration file will be created in the user's home directory.
 As all CIPs will require the above configuration capabilities, a common CIAO
 code library has been created for this, which all CIPs can use. This is called
 ciao-configuration, and is available as a project in the
-(ciao-utils repository)[https://github.com/nhs-ciao/ciao-utils]
+[ciao-utils repository](https://github.com/nhs-ciao/ciao-utils)
 
