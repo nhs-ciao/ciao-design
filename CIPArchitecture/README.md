@@ -33,6 +33,8 @@ A CIP will need to be able to find the etcd URL in order to access it's
 configuration. The URL can be provided as a command line parameter when the
 CIP is started.
 
+**TODO:** Clarify how this would work in an OSGi container.
+
 ## Running without etcd
 
 If you are unable to use etcd for some reason (or choose not to), CIPs will
