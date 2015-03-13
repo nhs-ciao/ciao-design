@@ -33,7 +33,7 @@ A CIP will need to be able to find the etcd URL in order to access it's
 configuration. The URL can be provided as a command line parameter when the
 CIP is started, this should be in the form:
 
-`--etcdURL=http://127.0.0.1:4001`
+`--etcdURL http://127.0.0.1:4001`
 
 **TODO:** Clarify how this would work in an OSGi container.
 
@@ -48,7 +48,7 @@ user's home directory in the path:
 An alternative path can be specified as a command line parameter when starting
 the CIP if required, this should be in the form:
 
-`--configPath=/etc/ciao`
+`--configPath /etc/ciao`
 
 Obviously, the use of config files will mean that configuration will need to
 be managed individually on all running instances - there is no mechanism for
