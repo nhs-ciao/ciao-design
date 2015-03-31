@@ -1,1 +1,1 @@
-Coming Soon.
+Talk about useful design methods and tools to use.

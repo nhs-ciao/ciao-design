@@ -1,1 +1,1 @@
-Coming Soon.
+Talk about the design outputs - illustrate with exemplar CIP.

@@ -1,1 +1,2 @@
-Coming Soon.
+This should paint a picture of the current health and social care landscape in terms of health economies organisation, processes and supporting IT systems. The economic and social drivers on these health economies and the subsequent requirements placed on the supporting IT systems. Why current IT systems are failing to meet these requirements and what needs to be done, with a focus on the integration space. Quick survey of integration market – generic commercial and open source middleware, care specific commercial and open source middleware – to position CIAO. Outline the advantages (benefits) of CIAO and also any disadvantages (costs) also.
+This chapter should enable a reader to understand why they might want to use CIAO.

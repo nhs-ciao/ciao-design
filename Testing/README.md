@@ -1,1 +1,1 @@
-Coming Soon.
+Talk about unit testing etc. Illustrate with exemplar CIP.
