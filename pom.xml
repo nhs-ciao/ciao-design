@@ -2,31 +2,29 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.nhs.ciao</groupId>
   <artifactId>ciao-design</artifactId>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>ciao-design</name>
   <description>This is the project for the design of CIAO and all it's CIPs</description>
-  <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   
   <dependencies>
 	<!-- Cucumber -->  
     <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.8</version>
             <scope>test</scope>
     </dependency>
     <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.8</version>
             <scope>test</scope>
     </dependency>
     <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
             <scope>test</scope>
     </dependency>
     <!-- Cucumber Reports -->
@@ -45,6 +43,7 @@
 	   			<configuration>
 	   				<source>1.6</source>
 	   				<target>1.6</target>
+	   				<encoding>UTF-8</encoding>
 	   			</configuration>
 	   		</plugin>
 	  	</plugins>

@@ -1,9 +1,7 @@
 package transferofcare;
 
-import cucumber.annotation.en.Then;
-import cucumber.runtime.PendingException;
-
-
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Then;
 
 public class CommonErrorsStepDefinitions {
 	@Then("^the document should be moved into a failures directory$")

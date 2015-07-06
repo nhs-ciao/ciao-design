@@ -1,10 +1,8 @@
 package transferofcare;
 
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.When;
-import cucumber.runtime.PendingException;
-import cucumber.table.DataTable;
-
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 public class EnricherErrorsStepDefinitions {
 	

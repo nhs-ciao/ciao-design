@@ -1,11 +1,8 @@
 package transferofcare;
 
-import java.util.List;
-
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.When;
-import cucumber.runtime.PendingException;
-
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 public class ParserErrorsStepDefinitions {
 	
