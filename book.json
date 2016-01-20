@@ -1,0 +1,11 @@
+{
+    "title": "Care Integration and Orchestration",
+    "description": "Everything you need to know about using, configuring, and contributing to CIAO",
+    "structure": {
+        "readme": "Intro.md"
+    },
+    "pdf": {
+        "headerTemplate": "_TITLE_",
+        "footerTemplate": "Copyright 2016 Health and Social Care Information Centre - _PAGENUM_"
+    }
+}

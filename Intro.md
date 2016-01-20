@@ -1,0 +1,1 @@
+This book is a working document that explains CIAO, how it can be downloaded, deployed, configured and used. I also covers details about the design of CIAO, and should provide sufficient information for developers interested in contributing to, forking, or otherwise working with the CIAO code in their projects.
