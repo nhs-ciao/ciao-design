@@ -5,6 +5,7 @@
 * [Preface](./Preface/preface.md)
 
 * [Part 1](./Part1/part1.md)
+  * [1. Introduction](./Introduction/introduction.md)
 
 * [Say Hello to CIAO](./HelloCIAO/README.md)
 * [CIAO Objectives](./Objectives/README.md)
