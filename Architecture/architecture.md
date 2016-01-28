@@ -159,9 +159,7 @@ Currently etcd does not provide any monitoring functionality such as JMX. Theref
 
 The host to container mappings for the default `ciao-etcd` deployment are:
 
-| Network Ports |
-|---------------|
-| Container	| Host |
+| Container	port| Host port |
 |-----------|------|
 | 2379	| 2379 |
 | 2380	| 2380 |
