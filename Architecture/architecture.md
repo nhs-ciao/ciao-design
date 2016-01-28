@@ -158,3 +158,9 @@ Figure 2.6-3 here
 Currently etcd does not provide any monitoring functionality such as JMX. Therefore the only way to monitor the state of the etcd cluster is to monitor the state of each individual etcd Docker container in the cluster to see if it has stopped.
 
 The host to container mappings for the default `ciao-etcd` deployment are:
+
+| Network Ports |
+| Container	| Host |
+| 2379	| 2379 |
+| 2380	| 2380 |
+| 4001	| 4001 |
