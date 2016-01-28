@@ -1,3 +1,6 @@
+# Summary
+
+* [Copyright](./Copyright/copyright.md)
 
 * [Say Hello to CIAO](./HelloCIAO/README.md)
 * [CIAO Objectives](./Objectives/README.md)
