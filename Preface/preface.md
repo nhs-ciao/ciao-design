@@ -72,7 +72,7 @@ Newman, S. Building Microservices. O'Reilly Media, 2015.
 Snyder, B., Bosanac, D. & Davies, R. ActiveMQ in Action. Manning Publications, 2011.
 
 ## Acknowledgments
-The authors would like to thank the dragons in the internal HSCIC Innovation competition dragons den; Andy Williams, Tom Denwood, Beverley Bryant and [etal] for launching CIAO by choosing it as an innovation winner. Hopefully Beverley the lads have indeed “cracked on” as you requested.
+The authors would like to thank the dragons in the internal HSCIC Innovation competition dragons den; Andy Williams, Tom Denwood, Beverley Bryant and [etal] for launching CIAO by choosing it as an innovation winner. Hopefully Beverley the lads have indeed *“cracked on”* as you requested.
 
 Without the resources secured by Peter Counter moving CIAO from idea to working code would not have been possible.
 
