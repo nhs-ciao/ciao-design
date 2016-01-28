@@ -41,16 +41,23 @@ Constant width italic - Shows text that should be replaced with user-supplied va
 
 ## Downloads
 The CIAO source code for the software components developed by HSCIC can be found in the public repositories on GitHub at:
+
 https://github.com/nhs-ciao 
+
 Jenkins is used as the continuous integration server to build the latest CIAO binaries for the software components developed by HSCIC. The binaries can be found at:
+
 http://hcdn-build1.cloudapp.net/view/CIAO/  
+
 [This may change to an non-Azure URL]
+
 To find a binary:
 *	select a project
 *	select workspace
 *	select target
 *	select binary file (.jar, .tar.gz or .zip) to download
+
 Docker images for the CIPs developed by HSCIC and additional Docker images for supporting services packaged for CIAO can be found on Docker Hub at:
+
 https://hub.docker.com/u/hscic/ 
 
 ## Further Reading
