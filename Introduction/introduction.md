@@ -5,7 +5,7 @@ Frustration at how difficult it was to implement integration between ICT systems
 
 Need to be able to do this quickly and cheaply to meet the growing challenges of the economic, efficient and effect delivery of health and care services.
 
-Need to test, through implementation, the many integration specifications and standards the HSCIC create (in the words of Microsoft to “eat our own dog food”). 
+Need to test, through implementation, the many integration specifications and standards the HSCIC create (in the words of Microsoft to *“eat our own dog food”*). 
 
 Opportunity of the emergence of containerisation and microservices within the IT industry to design bigger and better integration solutions.
 
@@ -13,7 +13,7 @@ Opportunity of resources made available through winning an internal innovation c
 
 Within England the NHS national strategy for patient centric care necessitates the need to connect and share care information between multiple care providers. These care providers use a variety of ICT systems to record and manage direct patient care. This gives a landscape of distributed, autonomous and multi-standard care ICT systems.
 
-Standards are often posited as the “silver bullet” that moves you from integration to interoperability, if everyone uses the same standards then systems should just plug and play. In real life high level standards around the structure and meaning of care information are still underdeveloped, duplicated and sparsely used. Therefore pragmatically, for the foreseeable future, there is a need for system integration middleware technology to “connect any” ICT systems within health economies.
+Standards are often posited as the “silver bullet” that moves you from integration to interoperability, if everyone uses the same standards then systems should just plug and play. In real life high level standards around the structure and meaning of care information are still underdeveloped, duplicated and sparsely used. Therefore pragmatically, for the foreseeable future, there is a need for system integration middleware technology to *“connect any”* ICT systems within health economies.
 
 Middleware technology provides the familiar functions of routing, transformation and orchestration (work flow) of interactions and their content between disparate external ICT systems. There are many commercial and open source middleware products and frameworks available. Products usually provide a comprehensive service through including bundled design, management and monitoring tools. Frameworks just provide a codebase that allows you to build your own integration solution.
   
