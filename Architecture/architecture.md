@@ -33,7 +33,7 @@ Define our model and explain advantages and disadvantage. This may include going
 ## 2.6. Product and Technology Stack
 CIAO uses a variety of open source products and technologies. These provide the supporting services and infrastructure needed to run and manage CIPs.
 
-Figure here.
+Figure 2.6-1 here.
 
 ### 2.6.1. Linux
 CIAO needs to run on Linux to be able to use Docker. However as the CIPs are developed in Java they can be run as non-containerised programs on any operating system that provides a JVM. This will require you to find, deploy, configure and manage your own supporting services, rather than using those that have already been bundled with CIAO for use on Linux.
@@ -52,5 +52,68 @@ Each CIAO Linux host must have the following services and applications installed
 *	[etal]
 
 CIAO assumes that all hosts within a CIAO cloud are connected together in a secure network environment, so that network access to and from the CIAO cloud is controlled, but that IP networking between hosts within the CIAO cloud is unrestricted. It is important that all hosts within the CIAO cloud have Internet access so they can connect to Docker Hub to pull down CIAO Docker images.
+
+### 2.6.2. Docker
+To use the CIPs packaged as Docker containers you have to install the Docker daemon (Docker Engine) on each Linux host that will be part of a CIAO cloud.
+
+For installation instructions see:
+
+https://docs.docker.com/installation/
+
+For example for Ubuntu Trusty, add a new gpg key:
+
+`$ sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 -- recv-keys 58118E89F3A912897C070ADBF76221572C52609D`
+
+Open the `/etc/apt/sources.list.d/docker.list` file in an editor. If the file doesn’t exist, create it. Add a single entry:
+
+`deb https://apt.dockerproject.org/repo ubuntu-trusty main`
+
+Save and close the `/etc/apt/sources.list.d/docker.list` file. Update the apt package index:
+
+`$ sudo apt-get update`
+
+Install Docker:
+
+`$ sudo apt-get install docker-engine`
+
+Verify Docker is installed correctly:
+
+`$ sudo docker run hello-world`
+
+This command downloads a test image and runs it in a container. When the container runs, it prints an informational message. Then, it exits.
+
+If you are new to Docker, then you can find comprehensive documentation at:
+
+https://docs.docker.com/ 
+
+Some useful Docker commands to know are listed below.
+
+To list all the Docker images on a host:
+
+`$ sudo docker images`
+
+To list all the Docker containers on a host:
+
+`$ sudo docker ps –a`
+
+To list all the running Docker containers on a host:
+
+`$ sudo docker ps` 
+
+To connect a new TTY to a running container:
+
+`$ sudo docker exec –t –i {container name} /bin/bash`
+
+To stop all Docker containers on a host:
+
+`$ sudo docker stop $(sudo docker ps -q)`
+
+To remove all Docker containers on a host:
+
+`$ sudo docker rm $(sudo docker ps -a -q)`
+   
+To remove all Docker images on a host:
+
+`$ sudo docker rmi $(sudo docker images -q)`
 
 
