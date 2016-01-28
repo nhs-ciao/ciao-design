@@ -116,4 +116,45 @@ To remove all Docker images on a host:
 
 `$ sudo docker rmi $(sudo docker images -q)`
 
+### 2.6.3. etcd
+Because CIPs can be deployed in a variety of different ways, there is a need for a consistent way of managing the configuration of CIPs even when they may be distributed across many containers and hosts. There are a number of approaches for managing configuration for distributed cloud solutions, including Zookeeper, Doozer, etcd.
 
+The tool chosen for CIAO is etcd. This provides a lightweight, simple solution which allows configuration to be easily created and accessed via a REST API, and also provides replication to allow each CIP to have its configuration kept in-sync as new instances are created.
+
+etcd has been produced as part of the CoreOS project, and more details can be found on their github page at:
+
+https://github.com/coreos/etcd  
+
+Information about the Docker image of etcd used by CIAO can be found at:
+
+https://github.com/coreos/etcd/blob/master/Documentation/docker_guide.md 
+
+To provide resilience CIAO uses clustered etcd, where two or more etcd instances are clustered together. In an etcd cluster any changes to one cluster member is automatically replicated to the other cluster members (peers).
+
+The etcd Docker image exposes the IP port 2380 to allow etcd peers to talk to each other in an etcd cluster, and the IP ports 2379 and 4001 to allow a client to talk to an etcd instance. By convention CIAO uses 4001. CIAO uses HTTP rather than HTTPS to talk to etcd, which means CIAO assumes it is operating in a secure network environment. 
+
+Figure 2.6-2 here
+
+To create or change a value in etcd within the secure network environment you can use curl to HTTP PUT a key and associated value, for example:
+
+`$ curl -L -X PUT http://localhost:4001/v2/keys/testkey -d value="testvalue"`
+
+To read the value from etcd use curl to HTTP GET the key value, for example:
+
+`$ curl http://localhost:4001/v2/keys/testkey`
+
+The result is returned in JSON format, for example:
+
+`{"action":"get","node":{"key":"/testkey","value":"testvalue","modifiedIndex":10,"createdIndex":10}}`
+
+To test that etcd is replicating content successfully within an etcd cluster curl to HTTP GET the key value from a different etcd cluster member, for example:
+
+`$ curl http:// 10.210.162.28:4001/v2/keys/testkey`
+
+By convention CIAO deploys an etcd instance on each host that runs CIPs as well as the management host. To provide resilience an etcd cluster of at least two members is required. By convention CIAO names the etcd cluster `etcd-cluster-cia`o and names individual etcd instances `etcd-{host moniker}`. The Docker container running etcd is named `ciao-etcd` by convention.
+
+Figure 2.6-3 here
+
+Currently etcd does not provide any monitoring functionality such as JMX. Therefore the only way to monitor the state of the etcd cluster is to monitor the state of each individual etcd Docker container in the cluster to see if it has stopped.
+
+The host to container mappings for the default `ciao-etcd` deployment are:
