@@ -2,7 +2,8 @@
 
 * [Copyright](./Copyright/copyright.md)
 * [Foreword](./Foreword/foreword.md)
-
+* [Preface](./Preface/preface.md)
+* 
 * [Say Hello to CIAO](./HelloCIAO/README.md)
 * [CIAO Objectives](./Objectives/README.md)
 * [Using CIAO](./UsingCIAO/README.md)
