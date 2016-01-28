@@ -37,7 +37,7 @@ The following typographical conventions are used in this book:
 
 **`Constant width bold`** - Shows commands or other text that should be typed literally by the user.
 
-`*Constant width italic*` - Shows text that should be replaced with user-supplied values or by values determined by context.
+*`Constant width italic`* - Shows text that should be replaced with user-supplied values or by values determined by context.
 
 ## Downloads
 The CIAO source code for the software components developed by HSCIC can be found in the public repositories on GitHub at:
