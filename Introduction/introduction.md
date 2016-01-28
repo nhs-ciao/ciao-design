@@ -1,4 +1,4 @@
-1. Introduction
+# 1. Introduction
 CIAO came from a mixture of frustration, need and opportunity from a group of technologists (the authors) working in the Health and Social Care Information Centre (HSCIC) in the UK.
 
 Frustration at how difficult it was to implement integration between ICT systems in the health and care sector.
@@ -19,20 +19,20 @@ Middleware technology provides the familiar functions of routing, transformation
   
 There are cost, learning time and skill barriers to using both commercial and open source middleware products and frameworks. CIAO aims to reduce these barriers while still maintaining flexibility and adaptability. To be more specific CIAO aims to accelerate integration by:
 
-•	Packaging integration components as microservices (CIPs)
-•	Making these CIPs easy to install, configure and manage
-•	Providing a set of common CIPs out of the box
-•	Providing a development kit to allow the building of new CIPs
+*	Packaging integration components as microservices (CIPs)
+*	Making these CIPs easy to install, configure and manage
+*	Providing a set of common CIPs out of the box
+*	Providing a development kit to allow the building of new CIPs
 
 Commoditise by:
 
-•	Provide CIPs as free open source software
-•	Developing a community of support for the use and development of CIPs
-•	Ensuring enterprise class resilience and scalability of CIPs
-•	Giving SME opportunities to offer CIAO run, support and development services
+*	Provide CIPs as free open source software
+*	Developing a community of support for the use and development of CIPs
+*	Ensuring enterprise class resilience and scalability of CIPs
+*	Giving SME opportunities to offer CIAO run, support and development services
 
 Evolve by:
 
-•	Moving from integration technology to integration patterns
-•	Moving from static to dynamic integration behaviours
-•	Building, seeding and curating a health and care integration ecology
+*	Moving from integration technology to integration patterns
+*	Moving from static to dynamic integration behaviours
+*	Building, seeding and curating a health and care integration ecology
