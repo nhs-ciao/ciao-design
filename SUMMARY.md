@@ -1,7 +1,7 @@
 # Summary
 
 * [Copyright](./Copyright/copyright.md)
-* [Forward](./Forward/forward.md)
+* [Foreword](./Foreword/foreword.md)
 
 * [Say Hello to CIAO](./HelloCIAO/README.md)
 * [CIAO Objectives](./Objectives/README.md)
