@@ -24,3 +24,4 @@ The information is licensed 'as is' and the HSCIC excludes all representations, 
 
 The HSCIC is not liable for any errors or omissions in the information and shall not be liable for any loss, injury or damage of any kind caused by its use. The HSCIC does not guarantee the continued supply of the information.
 
+
