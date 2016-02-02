@@ -164,3 +164,27 @@ The host to container mappings for the default `ciao-etcd` deployment are:
 | 2379	| 2379 |
 | 2380	| 2380 |
 | 4001	| 4001 |
+
+To help view and change values in etcd, rather than using curl a web based browser application called etcd-browser can be used. The Docker image for etcd-browser can be found at:
+
+https://hub.docker.com/r/buddho/etcd-browser/ 
+
+The etcd-browser Docker image exposes the IP port 8000 to allow a web browser to connect to it.
+
+Figure 2.6-4 here
+
+By convention CIAO deploys one instance of etc-browser on the management host. The Docker container running etcd-browser is named `ciao-etcdbrowser` by convention.
+
+The host to container mappings for the default `ciao-etcdbrowser` deployment are:
+
+| Container	port| Host port |
+|-----------|------|
+| 8000	| 7999 |
+
+To connect to etcd-browser you can point your web browser at the URL:
+
+http://{network address of etcd-browser}:7999
+
+The etcd-browser console should be opened as shown below:
+
+Figure here
