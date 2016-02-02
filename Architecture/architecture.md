@@ -212,35 +212,35 @@ The ZooKeeper Docker image also provides two data volumes:
 
 Figure 2.6-5 here
 
-You can monitor the health and status of individual ZooKeeper instances by using a set of four letter words that can be sent to the client port using telnet or nc. For example sending ruok checks whether the instance is running without any error. The instance will respond with imok if it is running. If the instance is in some error state, it will not respond to this command:
+You can monitor the health and status of individual ZooKeeper instances by using a set of four letter words that can be sent to the client port using `telnet` or `nc`. For example sending `ruok` checks whether the instance is running without any error. The instance will respond with `imok` if it is running. If the instance is in some error state, it will not respond to this command:
 
-$ telnet localhost 2181
-Trying ::1...
-Connected to localhost.
-Escape character is '^]'.
-ruok
-imokConnection closed by foreign host.
-$
+`$ telnet localhost 2181`
+`Trying ::1...`
+`Connected to localhost.`
+`Escape character is '^]'.`
+`ruok`
+`imokConnection closed by foreign host.`
+`$`
 
-You can also use the stat command to see the status of a ZooKeeper instance:
+You can also use the `stat` command to see the status of a ZooKeeper instance:
 
-$ telnet localhost 2181
-Trying ::1...
-Connected to localhost.
-Escape character is '^]'.
-stat
-Zookeeper version: 3.4.6-1569965, built on 02/20/2014 09:09 GMT
-Clients:
- /172.17.42.1:33995[0](queued=0,recved=1,sent=0)
- /10.210.162.28:36320[1](queued=0,recved=64369,sent=64376)
- /10.210.162.22:40594[1](queued=0,recved=30075,sent=30075)
-
-Latency min/avg/max: 0/0/56
-Received: 94449
-Sent: 94455
-Connections: 3
-Outstanding: 0
-Zxid: 0x1900000025
+`$ telnet localhost 2181`
+`Trying ::1...`
+`Connected to localhost.`
+`Escape character is '^]'`.
+`stat`
+`Zookeeper version: 3.4.6-1569965, built on 02/20/2014 09:09 GMT`
+`Clients:`
+ `/172.17.42.1:33995[0](queued=0,recved=1,sent=0)`
+ `/10.210.162.28:36320[1](queued=0,recved=64369,sent=64376)`
+ `/10.210.162.22:40594[1](queued=0,recved=30075,sent=30075)`
+``
+`Latency min/avg/max: 0/0/56`
+`Received: 94449`
+`Sent: 94455`
+`Connections: 3`
+`Outstanding: 0`
+`Zxid: 0x1900000025`
 Mode: follower
 Node count: 8
 Connection closed by foreign host.
