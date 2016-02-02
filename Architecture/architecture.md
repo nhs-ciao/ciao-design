@@ -247,3 +247,19 @@ Connection closed by foreign host.
 $
 ```
 By convention CIAO deploys a ZooKeeper instance on a minimum of three hosts. The Docker container running ZooKeeper is named `ciao-zookeeper` by convention.
+
+Figure 2.6-6 here
+
+The host to container mappings for the default `ciao-zookeeper` deployment are:
+
+| Container	port | Host port |
+|-----------|------|
+| 2181	| 2181 |
+| 2888	| 2888 |
+| 3888	| 3888 |
+
+| Container	volume | Host volume |
+|-----------|------|
+| /opt/zookeeper/conf	| /opt/ciao_zookeeper/conf |
+| /tmp/zookeeper	| /var/lib/ciao_zookeeper |
+
