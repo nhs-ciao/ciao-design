@@ -299,3 +299,17 @@ By convention CIAO deploys a minimum of three ActiveMQ brokers, one master and t
 
 Figure 2.6-8 here
 
+ActiveMQ provides monitoring and management capabilities with Java Management Extensions (JMX).
+
+The host to container mappings for the default `ciao-activemq` deployment are:
+
+| Container	port | Host port |
+|-----------|------|
+| 8161	| 8161 |
+| 61616	 | 61616 |
+| 61619	| 61619 |
+
+| Container	volume | Host volume |
+|-----------|------|
+| /opt/activemq/conf	| /opt/ciao_activemq/conf |
+
