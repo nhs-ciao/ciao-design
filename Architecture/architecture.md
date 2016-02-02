@@ -263,3 +263,39 @@ The host to container mappings for the default `ciao-zookeeper` deployment are:
 | /opt/zookeeper/conf	| /opt/ciao_zookeeper/conf |
 | /tmp/zookeeper	| /var/lib/ciao_zookeeper |
 
+### 2.6.5. ActiveMQ
+To ensure resilience of communication between CIPs, CIAO uses persisted messaging. There are a number of open source message brokers available. The product chosen for CIAO is ActiveMQ. This provides a message broker for remote communication between systems using the JMS (Java Message Service) specification.
+
+ActiveMQ is an Apache project, and more details can be found at:
+
+http://activemq.apache.org/ 
+
+Information about the Docker image of ActiveMQ used by CIAO can be found at:
+
+https://hub.docker.com/r/hscic/ciao-activemq/ 
+
+To provide resilience CIAO uses ActiveMQ clustered as Master/Slave. With Master/Slave messages are replicated to a slave broker so that if you have a failure of the master you get immediate failover to the slave with no message loss. The Master/Slave ActiveMQ configuration used by CIAO is the Replicated LevelDB Store. This uses Apache ZooKeeper to pick a master from a set of broker nodes configured to replicate a LevelDB Store (a high performance file based store ActiveMQ implements) and to pick a new master in case of failure. The Replicated LevelDB Store Master/Slave option allows you to have multiple slaves.
+
+The ActiveMQ Docker image exposes the IP port 8161 to allow access to the ActiveMQ web console and the IP port 61616 to allow a client to talk to the ActiveMQ broker using the TCP transport. The IP port 61619 is used for replication within an ActiveMQ cluster. CIAO does not use SSL to secure TCP communication with ActiveMQ which means CIAO assumes it is operating in a secure network environment.
+
+ The ActiveMQ Docker image also provides two data volumes:
+
+`/opt/activemq/conf` where configuration files are stored 
+`/opt/activemq/data` where data files are stored
+
+Figure 2.6-7 here
+
+To test that an ActiveMQ broker is running you can point your web browser at the URL:
+
+http://{network address of broker}:8161/admin
+
+The ActiveMQ web console should be opened as shown below. The default login username and password are `admin` and `admin`.
+
+Fidure here
+
+Note that within an ActiveMQ master/slave cluster, only the current master will be running the web console. This can be somewhat frustrating as you need to try and connect to the web console on each member of the cluster until you find a successful connection with the member who is the current master.
+
+By convention CIAO deploys a minimum of three ActiveMQ brokers, one master and two slaves, to provide resilience. By convention CIAO names the ActiveMQ brokers within the cluster `CiaoBroker`. The Docker container running ActiveMQ is named `ciao-activemq` by convention.
+
+Figure 2.6-8 here
+
