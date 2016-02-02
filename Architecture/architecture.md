@@ -188,3 +188,62 @@ http://{network address of etcd-browser}:7999
 The etcd-browser console should be opened as shown below:
 
 Figure here
+
+### 2.6.4. ZooKeeper
+
+ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. CIAO requires it to support the resilient deployment of ActiveMQ as described later and so is a necessary evil (more stuff to be deployed unfortunately).
+
+ZooKeeper is an Apache project, and more details can be found at:
+
+https://zookeeper.apache.org/ 
+
+Information about the Docker image of ZooKeeper used by CIAO can be found at:
+
+https://hub.docker.com/r/jplock/zookeeper/ 
+
+For a reliable ZooKeeper service, ZooKeeper needs to be deployed in a cluster known as an ensemble. As long as a majority of the ensemble are up, the service will be available. Because Zookeeper requires a majority, it is best to use an odd number of hosts.
+
+The ZooKeeper Docker image exposes the IP ports 2888 and 3888 to allow ZooKeeper peers to talk to each other in a ZooKeeper cluster, and the IP port 2181 to allow a client to talk to a ZooKeeper instance. By convention CIAO does not enable ZooKeeper authentication or authorisation but assumes it is operating in a secure network environment.
+
+The ZooKeeper Docker image also provides two data volumes:
+
+`/opt/zookeeper/conf` where configuration files are stored 
+`/tmp/zookeeper` where data and log files are stored
+
+Figure 2.6-5 here
+
+You can monitor the health and status of individual ZooKeeper instances by using a set of four letter words that can be sent to the client port using telnet or nc. For example sending ruok checks whether the instance is running without any error. The instance will respond with imok if it is running. If the instance is in some error state, it will not respond to this command:
+
+$ telnet localhost 2181
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+ruok
+imokConnection closed by foreign host.
+$
+
+You can also use the stat command to see the status of a ZooKeeper instance:
+
+$ telnet localhost 2181
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+stat
+Zookeeper version: 3.4.6-1569965, built on 02/20/2014 09:09 GMT
+Clients:
+ /172.17.42.1:33995[0](queued=0,recved=1,sent=0)
+ /10.210.162.28:36320[1](queued=0,recved=64369,sent=64376)
+ /10.210.162.22:40594[1](queued=0,recved=30075,sent=30075)
+
+Latency min/avg/max: 0/0/56
+Received: 94449
+Sent: 94455
+Connections: 3
+Outstanding: 0
+Zxid: 0x1900000025
+Mode: follower
+Node count: 8
+Connection closed by foreign host.
+$
+
+By convention CIAO deploys a ZooKeeper instance on a minimum of three hosts. The Docker container running ZooKeeper is named ciao-zookeeper by convention.
